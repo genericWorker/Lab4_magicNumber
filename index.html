@@ -8,11 +8,17 @@
   <script>
        var guess = prompt("Enter a whole number");
        var guessNumber = parseInt(guess);
-       console.log("guessNumber=" + guessNumber); 
+       
+        if (isNaN(guess)) {
+             alert("Not a number!"); 
+             window.location.reload(false)
+       }
+     
        var tempNumber = guessNumber; 
        var origNumber = guessNumber; 
         guessNumber+=9;
         document.write("<ul>");
+
             document.write ("<li>I added  9 to " + tempNumber + ". The new number is " + guessNumber + "</li>"); 
         tempNumber = guessNumber;
         guessNumber*=2;
